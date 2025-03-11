@@ -32,13 +32,13 @@ This web application displays a paginated list of products fetched from the [Dum
 1. **Clone the repository:**
 
     ```bash
-    git clone [repository URL pending]
+    git clone [https://github.com/Arv4ix/product-listing-app]
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd [project directory pending]
+    cd [product-listing-app]
     ```
 
 3. **Install dependencies:**
