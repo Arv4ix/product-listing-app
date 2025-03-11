@@ -1,0 +1,184 @@
+/* Main styling */
+body {
+  background-color: grey;
+  font-family: sans-serif;
+}
+
+/* ProductList page styling */
+
+/* Page Title */
+.product-list h1 {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Product Display */
+.product-list-container {
+  display: grid;
+  grid-template-columns: repeat(5,1fr); /* 5 columns */
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.product-item {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+}
+
+.product-item .details {
+  padding: 10px;
+}
+
+/* Pagination in Product List page */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: black;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 50px;
+  text-align: center;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Product Details page styling */
+.product-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.product-details-info {
+  width: 45%;
+}
+
+.horizontal-line {
+  border-bottom: 1px solid white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product-details-image {
+  width: 45%;
+  text-align: center;
+}
+
+.product-details-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details-gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.product-details-back-button {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgray;
+  color: rgb(87, 85, 85);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.product-details-back-button:hover {
+  background-color: rgb(37, 36, 36)
+}
+
+.product-details-separator {
+  border-right: 1px solid white;
+  margin: 0 20px;
+}
+
+/* ImageGallery styling */
+.image-gallery {
+  text-align: center;
+}
+
+.image-gallery .product-image {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.main-image-container {
+  position: relative; /* For positioning arrows */
+}
+
+.image-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5); /* Transparent-ish background */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; /* Ensure arrows are above the image */
+}
+
+.image-arrow.prev {
+  left: 10px;
+}
+
+.image-arrow.next {
+  right: 10px;
+}
+
+.image-thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.image-thumbnail {
+  width: 90px;
+  height: 90px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.image-thumbnail.active {
+  border-color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-details-container {
+    flex-direction: column; /* This will stack items vertically on small screens */
+  }
+  .product-details-info,
+  .product-details-image {
+    width: 100%; /* This takes full width on small screens */
+  }
+  .product-details-separator {
+    border-right: none; /* Removes the separator on small screens */
+    border-bottom: 1px solid white; /* Add bottom separator on small screens */
+    margin: 20px 0;
+  }
+}
